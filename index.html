@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heine Kabelverlegung – Professionell & Zuverlässig</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts laden -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schriftart als Standard setzen -->
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans">
+
+    <!-- Feste Navigation mit Abstand nach oben/unten (py-6) -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-6 sm:px-12 flex justify-between items-center transition-all">
+        <!-- Logo im fetten Bauhaus-Stil -->
+        <div class="font-bold text-2xl tracking-tighter text-blue-600 uppercase">
+            Heine <span class="text-slate-900">Kabelverlegung</span>
+        </div>
+        
+        <!-- Links mit spürbarem Abstand zueinander (space-x-8) -->
+        <div class="flex items-center space-x-8 text-lg font-medium tracking-tight">
+            <a href="#leistungen" class="hover:text-blue-600 transition">Leistungen</a>
+            <a href="#ueber-uns" class="hover:text-blue-600 transition">Über uns</a>
+            <a href="#kontakt" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-slate-900 transition shadow-lg shadow-blue-500/10">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- py-32 bläst den Abstand nach oben und unten massiv auf -->
+    <main class="max-w-6xl mx-auto px-8 sm:px-16 py-32 text-center md:text-left md:flex md:items-center md:gap-16">
+        
+        <!-- Linke Seite: Großer Text -->
+        <div class="md:w-3/5">
+            <!-- Einrahmung der Überschrift im Bauhaus-Stil (harte Konturen, große Schrift) -->
+            <div class="inline-block bg-slate-900 text-white rounded-2xl px-6 py-3 mb-8 tracking-wider uppercase text-xs font-bold">
+                ⚡ Kabelverlegung & Tiefbau
+            </div>
+
+            <!-- text-6xl und text-7xl machen die Überschrift gigantisch -->
+            <h1 class="text-5xl sm:text-7xl font-bold tracking-tighter text-slate-900 leading-[1.1]">
+                Präzise Verlegung. <br>
+                <span class="text-blue-600">Sichere Verbindung.</span>
+            </h1>
+
+            <!-- text-xl macht den Untertext sehr leserlich -->
+            <p class="mt-8 text-xl sm:text-2xl text-slate-600 font-normal leading-relaxed max-w-2xl">
+                Wir verlegen Ihre Infrastruktur schnell, sicher und fachgerecht im Erdreich und Hochbau. Qualität vom Experten für die Region.
+            </p>
+
+            <!-- Große, einladende Buttons -->
+            <div class="mt-12 flex flex-wrap gap-4 justify-center md:justify-start">
+                <a href="#kontakt" class="text-lg bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-900 shadow-xl shadow-blue-500/20 transition-all">
+                    Jetzt anfragen
+                </a>
+                <a href="#leistungen" class="text-lg text-slate-900 font-bold flex items-center hover:text-blue-600 transition-all px-4">
+                    Leistungen ansehen <span class="ml-2">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Rechte Seite: Ein großes, perfekt abgerundetes Bild-Element für die Tiefe -->
+        <div class="mt-16 md:mt-0 md:w-2/5">
+            <div class="relative">
+                <!-- Dekorativer Hintergrund-Block für Bauhaus-Kontur -->
+                <div class="absolute inset-0 bg-blue-600 rounded-3xl transform translate-x-4 translate-y-4 -z-10 opacity-20"></div>
+                <!-- Das eigentliche Bild (Hier als Platzhalter, bereit für dein Baustellenfoto) -->
+                <img src= "Kabel2.avif"
+                    alt="Kabelverlegung Baustelle" 
+                    class="w-full aspect-[4/5] object-cover rounded-3xl shadow-2xl border-4 border-white">
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Sektion: Leistungen -->
+    <section id="leistungen" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold tracking-tight">Unsere Kernkompetenzen</h2>
+            <p class="text-slate-500 mt-2">Zuverlässige Arbeit vom Tiefbau bis zum Anschluss.</p>
+        </div>
+
+        <!-- Dreispaltiges Raster für Leistungen -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+            <!-- Hier kommen deine 3 Leistungskarten rein (siehe Punkt 2) -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <span class="text-3xl">⚡</span>
+                <h3 class="text-xl font-bold mt-2">Stromkabel</h3>
+                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
+            </div>
+            <!-- Karte 2 -->
+            <!-- Karte 3 -->
+        </div>
+    </section>
+
+</body>
+</html>
