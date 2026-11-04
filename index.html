@@ -29,7 +29,8 @@
         <!-- Links mit spürbarem Abstand zueinander (space-x-8) -->
         <div class="flex items-center space-x-8 text-lg font-medium tracking-tight">
             <a href="#leistungen" class="hover:text-blue-600 transition">Leistungen</a>
-            <a href="#ueber-uns" class="hover:text-blue-600 transition">Über uns</a>
+            <a href="#ueber-uns" class="hover:text-blue-600 transition">Über mich</a>
+            <a href="#impressum" class="hover:text-blue-600 transition">Impressum</a>
             <a href="#kontakt" class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-slate-900 transition shadow-lg shadow-blue-500/10">Kontakt</a>
         </div>
     </nav>
@@ -42,7 +43,7 @@
         <div class="md:w-3/5">
             <!-- Einrahmung der Überschrift im Bauhaus-Stil (harte Konturen, große Schrift) -->
             <div class="inline-block bg-slate-900 text-white rounded-2xl px-6 py-3 mb-8 tracking-wider uppercase text-xs font-bold">
-                ⚡ Kabelverlegung & Tiefbau
+                Professionelle Kabelverlegung für die Region
             </div>
 
             <!-- text-6xl und text-7xl machen die Überschrift gigantisch -->
@@ -53,7 +54,7 @@
 
             <!-- text-xl macht den Untertext sehr leserlich -->
             <p class="mt-8 text-xl sm:text-2xl text-slate-600 font-normal leading-relaxed max-w-2xl">
-                Wir verlegen Ihre Infrastruktur schnell, sicher und fachgerecht im Erdreich und Hochbau. Qualität vom Experten für die Region.
+                Wir verlegen Ihre Infrastruktur schnell, sicher und fachgerecht auf dem Bau. Qualität vom Experten - vom Baumhaus bis zum Skyscraper!
             </p>
 
             <!-- Große, einladende Buttons -->
@@ -94,11 +95,60 @@
             <!-- Hier kommen deine 3 Leistungskarten rein (siehe Punkt 2) -->
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                 <span class="text-3xl">⚡</span>
-                <h3 class="text-xl font-bold mt-2">Stromkabel</h3>
+                <h3 class="text-xl font-bold mt-2">Strom</h3>
                 <p class="text-slate-600 mt-1">Beschreibung hier...</p>
             </div>
-            <!-- Karte 2 -->
-            <!-- Karte 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <span class="text-3xl">🌐</span>
+                <h3 class="text-xl font-bold mt-2">Glasfaser</h3>
+                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <span class="text-3xl">🔌</span>
+                <h3 class="text-xl font-bold mt-2">Komplexer Netzanschluss</h3>
+                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
+            </div>            <!-- Karte 3 -->
+        </div>
+    </section>
+
+    <!-- Sektion: Über mich -->
+    <section id="ueber-uns" class="relative max-w-6xl w-[calc(100%-3rem)] mx-auto my-12 bg-slate-200/60 rounded-2xl shadow-sm border border-slate-200/60 p-10">
+        <!-- Rundes Bild oben rechts -->
+        <img src="Heine_Profil.webp" alt="Portrait" class="absolute top-6 right-6 w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-white shadow-lg">
+        <div class="text-left mb-12 pr-32 sm:pr-44">
+            <h2 class="text-3xl font-bold tracking-tight">Über mich</h2>
+            <p class="text-slate-500 mt-2">Erfahren Sie mehr über mich und meine Werte.</p>
+        </div>
+    </section>
+
+    <!-- Sektion: Kontakt -->
+    <section id="kontakt" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold tracking-tight">Kontakt</h2>
+            <p class="text-slate-500 mt-2">Nehmen Sie Kontakt mit uns auf für Ihr Projekt.</p>
+            <form class="mt-6 max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-slate-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-slate-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-slate-700 font-bold mb-2">E-Mail</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-slate-300 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-slate-700 font-bold mb-2">Nachricht</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-slate-300 rounded"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sektion: Impressum -->
+    <section id="impressum" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+        <div class="text-left mb-18 p-10">
+            <h2 class="text-3xl font-bold tracking-tight">Impressum</h2>
+            <p class="text-slate-500 mt-2">Hier finden Sie die rechtlichen Informationen.</p>
         </div>
     </section>
 
