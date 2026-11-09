@@ -84,32 +84,100 @@
 
 
     <!-- Sektion: Leistungen -->
-    <section id="leistungen" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
+    <section id="leistungen" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 pt-6 pb-6 pr-6 relative overflow-hidden">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold tracking-tight">Unsere Kernkompetenzen</h2>
+            <h2 class="text-3xl font-bold tracking-tight">Meine Kernkompetenzen</h2>
             <p class="text-slate-500 mt-2">Zuverlässige Arbeit vom Tiefbau bis zum Anschluss.</p>
         </div>
 
-        <!-- Dreispaltiges Raster für Leistungen -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
-            <!-- Hier kommen deine 3 Leistungskarten rein (siehe Punkt 2) -->
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <span class="text-3xl">⚡</span>
-                <h3 class="text-xl font-bold mt-2">Strom</h3>
-                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
+        <!-- Container für die Kabel-Leistungen -->
+        <div class="max-w-4xl ml-0 mr-auto space-y-8 relative my-12">
+            
+            <!-- KABEL 1: Strom (PE / Schutzleiter) -->
+            <div class="leistung-item group cursor-pointer flex flex-col" onclick="toggleLeistung(this)">
+                <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+                    <!-- Das Kabel: Kommt ganz von links, animiert sich bei Hover -->
+                    <div class="h-12 w-[33vw] bg-gradient-to-b from-green-600 from-50% to-yellow-400 to-50% rounded-r transition-all duration-300 group-hover:w-[43vw] shadow-md border-y border-r border-slate-300/30 flex items-center justify-end relative overflow-visible">
+                        <div class="h-6 w-11 bg-amber-600 border border-amber-700/40 rounded-r-sm transform translate-x-11 shadow-sm"></div>
+                    </div>
+                    <!-- Der Text rechts vom Kabel -->
+                    <div class="ml-16 flex items-center gap-3">
+                        <span class="text-2xl">⚡</span>
+                        <h3 class="text-xl font-bold text-slate-800">Strom </h3>
+                    </div>
+                </div>
+                <!-- Das ausklappbare Textfeld -->
+                <!-- ÄNDERUNG HIER: Steuerung über group-hover:max-h-40 und opacity für weiches Einblenden -->
+                <div class="leistung-inhalt max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-60 group-hover:opacity-100 pl-[calc(33vw+1rem)]">
+                    <div class="pt-4 pb-2 text-slate-600 max-w-xl">
+                        Hier steht die genauere Beschreibung für den Bereich Strom. Du kannst Details zu Installationen, Sicherheit und deinen Services hinzufügen.
+                    </div>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <span class="text-3xl">🌐</span>
-                <h3 class="text-xl font-bold mt-2">Glasfaser</h3>
-                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
+
+            <!-- KABEL 2: Glasfaser (+) -->
+            <div class="leistung-item group cursor-pointer flex flex-col" onclick="toggleLeistung(this)">
+                <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+                    <!-- Das Kabel -->
+                    <div class="h-12 w-[33vw] bg-red-600 rounded-r transition-all duration-300 group-hover:w-[38vw] shadow-md flex items-center justify-end relative overflow-visible">
+                        <div class="h-6 w-11 bg-amber-600 border border-amber-700/40 rounded-r-sm transform translate-x-11 shadow-sm"></div>
+                    </div>
+                    <!-- Der Text -->
+                    <div class="ml-16 flex items-center gap-3">
+                        <span class="text-2xl">🌐</span>
+                        <h3 class="text-xl font-bold text-slate-800">Glasfaser</h3>
+                    </div>
+                </div>
+                <!-- Das ausklappbare Textfeld -->
+                <div class="leistung-inhalt max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-60 group-hover:opacity-100 pl-[calc(33vw+1rem)]">
+                    <div class="pt-4 pb-2 text-slate-600 max-w-xl">
+                        Hier kommt die Beschreibung für Glasfaser rein. Highspeed-Internet, Spleißen, Rohrverlegung und alles, was dazugehört.
+                    </div>
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                <span class="text-3xl">🔌</span>
-                <h3 class="text-xl font-bold mt-2">Komplexer Netzanschluss</h3>
-                <p class="text-slate-600 mt-1">Beschreibung hier...</p>
-            </div>            <!-- Karte 3 -->
+            <!-- KABEL 3: Komplexer Netzanschluss (-) -->
+            <div class="leistung-item group cursor-pointer flex flex-col" onclick="toggleLeistung(this)">
+                <div class="flex items-center transition-transform duration-300 group-hover:scale-105">
+                    <!-- Das Kabel -->
+                    <div class="h-12 w-[33vw] bg-blue-600 rounded-r transition-all duration-300 group-hover:w-[38vw] shadow-md flex items-center justify-end relative overflow-visible">
+                        <div class="h-6 w-11 bg-amber-600 border border-amber-700/40 rounded-r-sm transform translate-x-11 shadow-sm"></div>
+                    </div>
+
+                    <!-- Der Text -->
+                    <div class="ml-16 flex items-center gap-3">
+                        <span class="text-2xl">🔌</span>
+                        <h3 class="text-xl font-bold text-slate-800">Komplexer Netzanschluss</h3>
+                    </div>
+                </div>
+                <!-- Das ausklappbare Textfeld -->
+                <div class="leistung-inhalt max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-60 group-hover:opacity-100 pl-[calc(33vw+1rem)]">
+                    <div class="pt-4 pb-2 text-slate-600 max-w-xl">
+                        Details zum komplexen Netzanschluss. Zuverlässige Verbindung vom Hauptnetz bis direkt ins Gebäude, inklusive Zähleranlagen.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Dieses kleine Skript sorgt für das Auf- und Zuklappen -->
+    <script>
+    function toggleLeistung(element) {
+        // Finde das Textfeld innerhalb des geklickten Elements
+        const inhalt = element.querySelector('.leistung-inhalt');
+        
+        // Prüfe, ob es schon offen ist
+        if (inhalt.style.maxHeight && inhalt.style.maxHeight !== "0px") {
+            inhalt.style.maxHeight = "0px";
+        } else {
+            // Schließe zuerst alle anderen (optional, falls immer nur eins offen sein soll)
+            document.querySelectorAll('.leistung-inhalt').forEach(el => el.style.maxHeight = "0px");
+            
+            // Öffne das aktuelle Feld passend zur Texthöhe
+            inhalt.style.maxHeight = inhalt.scrollHeight + "px";
+        }
+    }
+    </script>
+
 
     <!-- Sektion: Über mich -->
     <section id="ueber-uns" class="relative max-w-6xl w-[calc(100%-3rem)] mx-auto my-12 bg-slate-200/60 rounded-2xl shadow-sm border border-slate-200/60 p-10">
@@ -125,7 +193,7 @@
     <section id="kontakt" class="bg-white rounded-2xl shadow-sm border border-slate-200/60 p-6">
         <div class="text-center mb-12">
             <h2 class="text-3xl font-bold tracking-tight">Kontakt</h2>
-            <p class="text-slate-500 mt-2">Nehmen Sie Kontakt mit uns auf für Ihr Projekt.</p>
+            <p class="text-slate-500 mt-2">Nehmen Sie Kontakt mit mir auf für Ihr Projekt.</p>
             <form class="mt-6 max-w-xl mx-auto">
                 <div class="mb-4">
                     <label for="name" class="block text-slate-700 font-bold mb-2">Name</label>
@@ -141,6 +209,7 @@
                 </div>
                 <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Absenden</button>
             </form>
+            <p class="text-slate-500 mt-4">Ich freue mich auf Ihre Nachricht und werde mich zeitnah bei Ihnen melden.</p>
         </div>
     </section>
 
